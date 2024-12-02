@@ -1,0 +1,239 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+  
+/* Body Styling */
+body {
+  font-family: 'Arial', sans-serif;
+  color: #fff;
+  background: linear-gradient(to right, #b4bfd4, #85a9d1);
+  overflow-x: hidden;
+}
+  
+/* header */
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+}
+
+/* Header Styling */
+header {
+  padding: 1rem 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); Depth for header */
+  transition: all 0.3s ease;
+}
+
+/* Nav Container */
+.nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+/* Logo Styling */
+/* Logo Image Styling */
+.logo-img {
+  width: 150px; /* Adjust to fit your design */
+  height: auto;
+  display: block;
+  margin-right: 20px;
+  /* Optionally, add a hover effect if you want */
+  transition: transform 0.3s ease;
+}
+
+.logo-img:hover {
+  transform: scale(1.1); /* Slight zoom effect on hover */
+}
+
+/* Navigation Links Styling */
+.nav-links {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+}
+
+.nav-links li {
+  margin: 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 500;
+  position: relative;
+  padding: 8px 0;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Navigation Link Hover Effect */
+.nav-links a:hover {
+  color: #00c6ff;
+  transform: translateY(-4px); /* Upward movement on hover */
+}
+
+/* Underline Animation for Links */
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #00c6ff;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  transform: scaleX(1); /* Expands the underline */
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+  header {
+    padding: 1rem 0.5rem;
+  }
+
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .nav-links a {
+    font-size: 1.2rem;
+    padding: 10px 0;
+  }
+}
+
+/* Hero Section */
+  .hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 70vh;
+    padding: 40px;
+  }
+  
+  .hero-content {
+    max-width: 50%;
+}
+  
+  .hero-content h2 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+  
+.hero-content p {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+  
+.hero-content button {
+    background: #00c6ff;
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+  
+  .hero-content button:hover {
+    background: #005792;
+}
+  
+/* 3D Cover Image */
+.hero-3d {
+    max-width: 50%;
+    transform: perspective(800px) rotateX(0deg) rotateY(0deg); /* Rotate guud ahaan */
+    transition: transform 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55), opacity 0.5s ease-in-out;
+    overflow: hidden; /* Ka hortag sawirka inuu ka baxo xuduudaha */
+}
+  
+.hero-3d img {
+    width: 100%;
+    transition: transform 0.6s cubic-bezier(0.68, -0.55, 0.27, 1.55), opacity 0.5s ease-in-out;
+    filter: brightness(0.85); /* Sawirka wuxuu leeyahay iftiin fudud oo cusub */
+}
+  
+.hero:hover .hero-3d {
+    transform: perspective(800px) rotateX(10deg) rotateY(20deg) scale(1.1); /* Qiyaas dheeraad ah oo ku saabsan xagal, rotate, iyo scale */
+    opacity: 1; /* Dhiirrigeliya sawirka isagoo muuqda si buuxda */
+}
+  
+.hero:hover .hero-3d img {
+    transform: scale(1.15) rotate(3deg); /* Zoom xoog leh iyo rogista sawirka si xiiso leh */
+    filter: brightness(1); /* Kor u qaad iftiinka sawirka */
+}
+
+/* Social Media Footer */
+.social-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  gap: 30px;
+  padding: 20px 0;
+
+}
+
+/* Social Media Icons Styling */
+.social-icon {
+  font-size: 30px;
+  color: #fff;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.social-icon:hover {
+  color: #00c6ff; /* Change color on hover */
+  transform: scale(1.2); /* Slight grow effect */
+}
+
+/* Color for specific icons */
+.social-icon.facebook:hover {
+  color: #3b5998; /* Facebook blue */
+}
+
+.social-icon.whatsapp:hover {
+  color: #25D366; /* WhatsApp green */
+}
+
+.social-icon.linkedin:hover {
+  color: #0A66C2; /* LinkedIn blue */
+}
+
+.social-icon.instagram:hover {
+  color: #C13584; /* Instagram pink */
+}
+
+.social-icon.tiktok:hover {
+  color: #69C9D0; /* TikTok blue */
+}
+
+  
+  
